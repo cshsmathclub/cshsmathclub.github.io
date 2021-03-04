@@ -5,6 +5,7 @@
     <title>Save Web Form Data to Spreadsheets - Contact Form</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="jquery.jslatex.js"></script>
     <script>
         function SubForm() {
             $.ajax({
@@ -20,9 +21,21 @@
             });
         }
     </script>
+
+    <script>
+        $(function () {
+            $(".latex").latex();
+        });
+    </script>
 </head>
 
 <body>
+    <h1>This is the welcome page for this year's EMC Competition</h1>
+    <h2>This page is currently being constructed 1</h2>
+    <div class="latex">
+        \text{Yo What Up}
+    </div>
+
     <form id="myForm">
         <label>Full Name</label>
         <br />
@@ -34,18 +47,16 @@
         <br />
         <label>Age</label>
         <br />
-        <input type="radio" id="age" name="age" value="18-35" /> 18-35<br />
-        <input type="radio" id="age" name="age" value="35+" /> 35+<br />
+        <input type="radio" id="age" name="age" value="18-35" /> 18-35
+        <input type="radio" id="age" name="age" value="35+" /> 35+
+        <br /><br />
+        <label>Message</label>
+        <br />
+        <textarea name="message"></textarea>
         <br />
         <label>Message</label>
         <br />
-        <textarea name="message">
-        </textarea>
-        <br />
-        <label>Message</label>
-        <br />
-        <textarea name="message2">
-                </textarea>
+        <textarea name="message2"></textarea>
         <br />
         <br />
     </form>
