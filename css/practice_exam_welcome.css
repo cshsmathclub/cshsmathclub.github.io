@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    padding: 50px;
+    font-family: "Computer Modern Serif";
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+    background-color: lightskyblue;
+    padding: 7px;
+    font-family: "Computer Modern Serif";
+}

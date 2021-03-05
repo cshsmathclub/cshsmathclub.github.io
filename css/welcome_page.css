@@ -4,11 +4,16 @@ body {
     width: 850px;
     margin: auto;
     padding: 50px;
+    font-family: "Computer Modern Sans", sans-serif;
 }
 h1 {
     text-align: center;
     background-color: #c0c0c0;
     color: purple;
+}
+
+img {
+    width: 650px;
 }
 
 /* Add a black background color to the top navigation */
@@ -28,12 +33,6 @@ h1 {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  /*float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 50px;
-  text-decoration: none;
-  font-size: 17px;*/
   display:inline-block;
   padding-left:30px;
   padding-right: 30px;

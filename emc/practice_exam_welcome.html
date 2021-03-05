@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <title>Elementary Math Contest-Home</title>
+    <title>Practice Exam</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="jquery.jslatex.js"></script>
@@ -30,43 +31,27 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
         integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link rel="stylesheet" href="../css/practice_exam_welcome.css">
 </head>
 
 <body>
-    <h1>This is the welcome page for this year's EMC Competition</h1>
-    <h2>This page is currently being constructed 2</h2>
-    <p>\[\text{We now have some working latex rendering. I can write some fractions, like } \frac{23}{\omega}\]</p>
+    <h1>EMC Practice Exam</h1>
+    <h2>Directions:</h2>
+    <ul>
+        <li>This test consists of 25 questions. These questions are similar in topic and style to the ones you will see
+            on March 27th.</li>
+        <li>On the real exam, you are only allowed to use a writing utensil, scratch paper, and your big brain. However,
+            on this practice exam, you can use whatever resources you wish to use.</li>
+        <li>The problems are not necessarily in order of difficulty.</li>
+        <li>If you don't know how to do a problem, don't look at the solution right away. Try some different things
+            first.</li>
+        <li>Most importantly, be creative, and have fun. The most important thing is that you exercise your brain
+            thinking about these problems-- even if you get them wrong, the time spent thinking is very valuable.</li>
+    </ul>
+    <button type="button">I've read the directions, take me to the test!</button>
 
-    <br /><br /><br />
-    <p>\[\textcolor{red}{\text{We also have perfectly working forms submissions.}}\]</p>
-
-    <form id="myForm">
-        <p>Will this work within the form environmetn?</p>
-        <p>\[\text{How about some LaTeX?} \oint{E\cdot dA} = \frac{Q}{\epsilon_0}\]</p>
-        <label>Full Name</label>
-        <br />
-        <input name="full_name" />
-        <br />
-        <label>Email</label>
-        <br />
-        <input name="email" />
-        <br />
-        <label>Age</label>
-        <br />
-        <input type="radio" id="age" name="age" value="18-35" /> 18-35
-        <input type="radio" id="age" name="age" value="35+" /> 35+
-        <br /><br />
-        <label>Message</label>
-        <br />
-        <textarea name="message"></textarea>
-        <br />
-        <label>Message</label>
-        <br />
-        <textarea name="message2"></textarea>
-        <br />
-        <br />
-    </form>
-    <button onclick="SubForm()">Submit</button>
 </body>
 
 </html>
