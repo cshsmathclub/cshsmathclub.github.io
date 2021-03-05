@@ -1,14 +1,14 @@
 body {
-    background-color: #c0c0c0;
+    /*background-color: #c0c0c0;*/
     text-align: center;
-    width: 850px;
+    width: 1000px;
     margin: auto;
     padding: 50px;
-    font-family: "Computer Modern Sans", sans-serif;
+    font-family: "Computer Modern Serif", sans-serif;
+    background-image: url(../images/site_background.jpg);
 }
 h1 {
     text-align: center;
-    background-color: #c0c0c0;
     color: purple;
 }
 
