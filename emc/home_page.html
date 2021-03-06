@@ -3,12 +3,16 @@
 
 <head>
     <title>Elementary Math Contest-Home</title>
+
+    <!-- A bunch of code for the upload to a google sheets-->
+    <!-- Take this out of this file once you verify that it works in the practice exam-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="jquery.jslatex.js"></script>
     <script>
         function SubForm() {
             $.ajax({
+                //Change this URL below to the one for the 
                 url: 'https://api.apispreadsheets.com/data/8997/',
                 type: 'post',
                 data: $("#myForm").serializeArray(),
@@ -34,13 +38,8 @@
 
 <body>
     <h1>Elementary Math Contest</h1>
-
-    <br /><br /><br />
-    <p>\[\textcolor{red}{\text{We also have perfectly working forms submissions.}}\]</p>
-
+    <!--
     <form id="myForm">
-        <p>Will this work within the form environmetn?</p>
-        <p>\[\text{How about some LaTeX?} \oint{E\cdot dA} = \frac{Q}{\epsilon_0}\]</p>
         <label>Full Name</label>
         <br />
         <input name="full_name" />
@@ -64,7 +63,7 @@
         <br />
         <br />
     </form>
-    <button onclick="SubForm()">Submit</button>
+    <button onclick="SubForm()">Submit</button>-->
 </body>
 
 </html>
