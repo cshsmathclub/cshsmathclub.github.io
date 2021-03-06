@@ -4,6 +4,7 @@ body {
     margin: auto;
     border-top: 0px;
 }
+
 h1 {
     text-align: center;
     color: purple;
@@ -25,7 +26,7 @@ img {
   overflow: hidden;
   width:50%;
   height:fit-content;*/
-    background-color: #333;
+    background-color: rgb(85, 85, 85);
     list-style:none;
     margin:auto;
     padding:0px;
@@ -42,9 +43,10 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   margin: auto;
-  color: #f2f2f2;
+  color: white;
   font-size: 20px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* Change the color of links on hover */
