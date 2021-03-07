@@ -16,7 +16,7 @@ body {
 }
 
 
-#reg_button {
+#reg_button,#practice_exam_button {
 -webkit-appearance: button;
 -moz-appearance: button;
 appearance: button;
