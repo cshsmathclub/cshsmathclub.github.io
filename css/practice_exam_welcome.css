@@ -1,20 +1,52 @@
 body {
+    /*background-color: #c0c0c0;*/
     text-align: center;
-    width: 800px;
     margin: auto;
+    border-top: 0px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    background-color: rgb(85, 85, 85);
+    font-size: 60px;
     padding: 50px;
-    font-family: "Computer Modern Serif";
-    background-image: url(../images/repeating_background.jpg);
-    background-repeat: repeat;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-ul {
+#direction_head {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#direction_list {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
-li {
-    padding-top: 5px;
-    padding-bottom: 5px;
+#direction_list>ul>li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#start_exam {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    background-color: orange;
+    color: black;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    border-radius: 12px;
 }
 
 button {
