@@ -15,6 +15,25 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+#reg_button {
+-webkit-appearance: button;
+-moz-appearance: button;
+appearance: button;
+text-decoration: none;
+
+background-color: orange;
+  color: black;
+  font-size: 23px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+}
+
 h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
