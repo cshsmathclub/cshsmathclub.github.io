@@ -33,6 +33,25 @@ body {
     border-radius: 12px;
 }
 
+#faq {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#faq>ul {
+    font-size: 18px;
+    text-align: left;
+}
+
+#faq>ul>li {
+    padding-bottom: 15px;
+}
+
+#faq>ul>li>b {
+    padding-bottom: 7px;
+}
+
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
