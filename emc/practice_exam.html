@@ -5,6 +5,8 @@
 <head>
     <title>Elementary Math Contest-Home</title>
 
+    <link rel="stylesheet" href="../css/practice_exam.css"
+
     <!-- A bunch of code for the upload to a google sheets-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -37,7 +39,31 @@
 </head>
 
 <body>
-    <h1>Under Construction-- This is where the actual practice exam will go.</h1>
+    <h1 id="title">Practice Exam</h1>
+    <form id="practice_exam">
+        <h2>Information</h2>
+        <div id="info_section">
+            <div id="field">
+                <label>Name</label>
+                <input name="name">
+                <br />
+            </div>
+
+            <div id="field">
+                <label>Email</label>
+                <input name="email">
+                <br />
+            </div>
+
+            <div id="field">
+                <label>Gender</label>
+                <input type="radio" id="gender" name="gender" value="male" /> Male
+                <input type="radio" id="gender" name="gender" value="female" /> Female
+                <input type="radio" id="gender" name="gender" value="pnts" /> Prefer Not To Say
+            </div>
+        </div>
+        <hr>
+    </form>
 </body>
 
 </html>

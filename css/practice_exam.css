@@ -1,0 +1,41 @@
+body {
+    /*background-color: #c0c0c0;*/
+    text-align: center;
+    border-top: 0px;
+    margin: auto;
+}
+
+#practice_exam {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#practice_exam>#info_section {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#practice_exam>#info_section>#field {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#practice_exam>#info_section>#field>label {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    background-color: rgb(85, 85, 85);
+    font-size: 60px;
+    padding: 50px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
