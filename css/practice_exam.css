@@ -26,6 +26,30 @@ body {
     margin-right: 15px;
 }
 
+.question {
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-family: "Computer Modern Serif";
+}
+
+.question>#text {
+    font-size: 21.78px;
+    font-family: "KaTeX_Main";
+}
+
+.question>#field {
+    margin-left: 50px;
+    height: 40px;
+    width: 100px;
+}
+
+.question>#field_not_inline {
+    margin: 0px;
+    height: 40px;
+    width: 100px;
+}
+
 #title {
     text-align: center;
     color: white;

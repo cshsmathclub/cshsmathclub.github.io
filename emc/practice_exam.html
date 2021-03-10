@@ -5,9 +5,8 @@
 <head>
     <title>Elementary Math Contest-Home</title>
 
-    <link rel="stylesheet" href="../css/practice_exam.css"
+    <link rel="stylesheet" href="../css/practice_exam.css">
 
-    <!-- A bunch of code for the upload to a google sheets-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="jquery.jslatex.js"></script>
@@ -15,9 +14,9 @@
         function SubForm() {
             $.ajax({
                 //Change this URL below to the one for the 
-                url: 'https://api.apispreadsheets.com/data/8997/',
+                url: 'https://api.apispreadsheets.com/data/9334/',
                 type: 'post',
-                data: $("#myForm").serializeArray(),
+                data: $("#practice_exam").serializeArray(),
                 success: function () {
                     alert("Form Data Submitted :)")
                 },
@@ -63,7 +62,35 @@
             </div>
         </div>
         <hr>
+
+        <br />
+        <br />
+
+
+        <div class="question">
+            \(\text{1. What is 902 + 44?}\) <input id="field" name="q1">
+        </div>
+
+        <div class="question">
+            \(\text{2. What is 41234 - 9835?}\) <input id="field" name="q2">
+        </div>
+
+        <div class="question">
+            \(\text{3. What is } 21 \times 50 + \frac{8}{2}\) <input id="field" name="q3">
+        </div>
+
+        <div class="question">
+            <p id="text">4. Mr. Macafee is hungry. 
+               He notices a donut shop that is next to College Station High School,
+                and he buys 53 dozen glazed donuts. 
+                How many donuts total did he buy if there are 
+                12 donuts in a dozen?
+            </p> 
+            <input id="field_not_inline" name="q4">
+        </div>
+
     </form>
+    <button onclick="SubForm()">Submit</button>
 </body>
 
 </html>
