@@ -26,6 +26,14 @@ body {
     margin-right: 15px;
 }
 
+#practice_exam>#info_section>#field>input[type=text] {
+    border: 1.5px solid black;
+}
+
+#practice_exam>#info_section>#field>input[type=email] {
+    border: 1.5px solid black;
+}
+
 .question {
     text-align: left;
     margin-bottom: 50px;
@@ -33,7 +41,7 @@ body {
     font-family: "Computer Modern Serif";
 }
 
-.question>#text {
+.question>#wrapped_text {
     font-size: 21.78px;
     font-family: "KaTeX_Main";
 }
@@ -46,6 +54,13 @@ body {
 
 .question>#field_not_inline {
     margin: 0px;
+    height: 40px;
+    width: 100px;
+}
+
+.question>input[type=text] {
+    border: 1.5px solid black;
+    margin-left: 30px;
     height: 40px;
     width: 100px;
 }

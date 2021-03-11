@@ -44,13 +44,13 @@
         <div id="info_section">
             <div id="field">
                 <label>Name</label>
-                <input name="name">
+                <input type="text" name="name">
                 <br />
             </div>
 
             <div id="field">
                 <label>Parent Email</label>
-                <input name="email">
+                <input type="email" name="email">
                 <br />
             </div>
 
@@ -66,29 +66,29 @@
         <br />
         <br />
 
+        <div id="question_section">
+            <div class="question">
+                \(\text{1. What is 902 + 44?}\) <input type="text" name="q1">
+            </div>
 
-        <div class="question">
-            \(\text{1. What is 902 + 44?}\) <input id="field" name="q1">
+            <div class="question">
+                \(\text{2. What is 41234 - 9835?}\) <input type="text" name="q2">
+            </div>
+
+            <div class="question">
+                \(\text{3. What is } 21 \times 50 + \frac{8}{2}\) <input type="text" name="q3">
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">4. Mr. Macafee is hungry. 
+                He notices a donut shop that is next to College Station High School,
+                    and he buys 53 dozen glazed donuts. 
+                    How many donuts total did he buy if there are 
+                    12 donuts in a dozen?
+                </p> 
+                <input id="field_not_inline" type="text" name="q4">
+            </div>
         </div>
-
-        <div class="question">
-            \(\text{2. What is 41234 - 9835?}\) <input id="field" name="q2">
-        </div>
-
-        <div class="question">
-            \(\text{3. What is } 21 \times 50 + \frac{8}{2}\) <input id="field" name="q3">
-        </div>
-
-        <div class="question">
-            <p id="text">4. Mr. Macafee is hungry. 
-               He notices a donut shop that is next to College Station High School,
-                and he buys 53 dozen glazed donuts. 
-                How many donuts total did he buy if there are 
-                12 donuts in a dozen?
-            </p> 
-            <input id="field_not_inline" name="q4">
-        </div>
-
     </form>
     <button onclick="SubForm()">Submit</button>
 </body>
