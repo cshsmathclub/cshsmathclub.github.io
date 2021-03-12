@@ -19,6 +19,7 @@
                 data: $("#practice_exam").serializeArray(),
                 success: function () {
                     alert("Form Data Submitted :)")
+                    $('#practice_exam')[0].reset();
                 },
                 error: function () {
                     alert("There was an error :(")
