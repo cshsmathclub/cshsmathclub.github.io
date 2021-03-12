@@ -40,7 +40,7 @@
 <body>
     <h1 id="title">Practice Exam</h1>
     <form id="practice_exam">
-        <h2>Information</h2>
+        <h2>Student Information</h2>
         <div id="info_section">
             <div id="field">
                 <label>Name</label>
@@ -59,6 +59,12 @@
                 <input type="radio" id="gender" name="gender" value="male" /> Male
                 <input type="radio" id="gender" name="gender" value="female" /> Female
                 <input type="radio" id="gender" name="gender" value="pnts" /> Prefer Not To Say
+            </div>
+
+            <div id="field">
+                <label>Grade</label>
+                <input type="radio" id="grade" name="grade" value="3" /> 3rd
+                <input type="radio" id="grade" name="grade" value="4" /> 4th
             </div>
         </div>
         <hr>
@@ -192,7 +198,9 @@
 
             <div class="question">
                 <p id="wrapped_text">17. How many triangles exist in the following picture? <br /><br />
-                <i>Hint: The best approach is to count the number of triangles of each size, and add those numbers up to get the total.</i></p>
+                <i>Hint: The best approach is to count the number of triangles of each size, and add those numbers up to get the total.
+                    There are 4 sizes of triangles.
+                </i></p>
                 <img id="triangles" src="exam_images/problem_17.png">
                 <input id="field_not_inline" type="text" name="q17">
             </div>
