@@ -12,6 +12,11 @@
     <script src="jquery.jslatex.js"></script>
     <script>
         function SubForm() {
+            var form_data = $('#practice_exam').serializeArray()
+            if (form_data[0].value=="" || form_data[1].value=="" || form_data[2].value=="" || form_data[3].value==""){
+                alert("Please fill out the information section fully")
+                return;
+            }
             $.ajax({
                 //Change this URL below to the one for the 
                 url: 'https://api.apispreadsheets.com/data/9334/',
