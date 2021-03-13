@@ -12,11 +12,28 @@
     <script src="jquery.jslatex.js"></script>
     <script>
         function SubForm() {
+
+
             var form_data = $('#practice_exam').serializeArray()
-            if (form_data[0].value=="" || form_data[1].value=="" || form_data[2].value=="" || form_data[3].value==""){
+            if (form_data[0].value == "" || form_data[1].value == "" || form_data[2].value == "" || form_data[3].value == "") {
                 alert("Please fill out the information section fully")
                 return;
             }
+
+            /*
+            fetch("https://api.apispreadsheets.com/data/9334/").then(res => {
+                if (res.status === 200) {
+                    // SUCCESS
+                    res.json().then(data => {
+                        const yourData = data
+                    }).catch(err => console.log(err))
+                }
+                else {
+                    // ERROR
+                }
+            })*/
+
+
             $.ajax({
                 //Change this URL below to the one for the 
                 url: 'https://api.apispreadsheets.com/data/9334/',
@@ -30,6 +47,7 @@
                     alert("There was an error :(")
                 }
             });
+
         }
     </script>
 
@@ -101,12 +119,12 @@
             </div>
 
             <div class="question">
-                <p id="wrapped_text">4. Mr. Macafee is hungry. 
-                He notices a donut shop that is next to College Station High School,
-                    and he buys 53 dozen glazed donuts. 
-                    How many donuts total did he buy if there are 
+                <p id="wrapped_text">4. Mr. Macafee is hungry.
+                    He notices a donut shop that is next to College Station High School,
+                    and he buys 53 dozen glazed donuts.
+                    How many donuts total did he buy if there are
                     12 donuts in a dozen?
-                </p> 
+                </p>
                 <input id="field_not_inline" type="text" name="q4">
             </div>
 
@@ -126,9 +144,9 @@
 
             <div class="question">
                 <p id="wrapped_text">7. Mr. Tyler needs to write 45 questions for a test.
-                     On the first day, Mr. Tyler writes 1 question. On the second day, Mr. Tyler writes 2 
-                     questions. On the third day, Mr Tyler writes 3 questions. How many days will it take for
-                      Mr. Tyler to write his 45 question test?
+                    On the first day, Mr. Tyler writes 1 question. On the second day, Mr. Tyler writes 2
+                    questions. On the third day, Mr Tyler writes 3 questions. How many days will it take for
+                    Mr. Tyler to write his 45 question test?
                 </p>
                 <input id="field_not_inline" type="text" name="q7">
             </div>
@@ -139,7 +157,7 @@
             </div>
 
             <div class="question">
-                <p id="wrapped_text">9. If Joseph Madre Jr. has 3 shirts colored red, green, and blue, 
+                <p id="wrapped_text">9. If Joseph Madre Jr. has 3 shirts colored red, green, and blue,
                     and 5 masks colored black, orange, purple, pink, and brown, how many different
                     combinations of shirts and masks can he wear?
                 </p>
@@ -147,7 +165,7 @@
             </div>
 
             <div class="question">
-                <p id="wrapped_text">10. How many unique, symmetrical letters are in the word 
+                <p id="wrapped_text">10. How many unique, symmetrical letters are in the word
                     TYPEWRITER?
                 </p>
                 <input id="field_not_inline" type="text" name="q10">
@@ -155,7 +173,7 @@
 
             <div class="question">
                 <p id="wrapped_text">11. Amelia plays volleyball. Each day for one week, Amelia records her
-                    highest jump. If she records the data below, what is her average vertical jump for this 
+                    highest jump. If she records the data below, what is her average vertical jump for this
                     week?
                 </p>
                 <img src="exam_images/amy_jumps.jpg"><br />
@@ -168,7 +186,7 @@
             </div>
 
             <div class="question">
-                <p id="wrapped_text">13. What is the unit digit of \( \text{  }7^{12}\)?</p>
+                <p id="wrapped_text">13. What is the unit digit of \( \text{ }7^{12}\)?</p>
                 <input id="field_not_inline" type="text" name="q13">
             </div>
 
@@ -194,8 +212,9 @@
 
             <div class="question">
                 <p id="wrapped_text">16. The following circles are the same size, and each has a radius of 7.
-                    The centers of the circles are points D and B. What is the perimeter of the shape ABCD?<br /><br /><i>
-                    Hint: The radius of a circle is the distance from any point on the circle to the center.
+                    The centers of the circles are points D and B. What is the perimeter of the shape
+                    ABCD?<br /><br /><i>
+                        Hint: The radius of a circle is the distance from any point on the circle to the center.
                     </i>
                 </p>
                 <img id="overlapping_circles" src="exam_images/problem_16.png">
@@ -204,15 +223,18 @@
 
             <div class="question">
                 <p id="wrapped_text">17. How many triangles exist in the following picture? <br /><br />
-                <i>Hint: The best approach is to count the number of triangles of each size, and add those numbers up to get the total.
-                    There are 4 sizes of triangles.
-                </i></p>
+                    <i>Hint: The best approach is to count the number of triangles of each size, and add those numbers
+                        up to get the total.
+                        There are 4 sizes of triangles.
+                    </i>
+                </p>
                 <img id="triangles" src="exam_images/problem_17.png">
                 <input id="field_not_inline" type="text" name="q17">
             </div>
 
             <div class="question">
-                <p id="wrapped_text">18. If a triangle with sides of length 6, 8, and 10 has an area of 24, what would be 
+                <p id="wrapped_text">18. If a triangle with sides of length 6, 8, and 10 has an area of 24, what would
+                    be
                     the area of a triangle with sides of 3, 4, and 5?
                 </p>
                 <input id="field_not_inline" type="text" name="q18">
@@ -227,7 +249,8 @@
 
             <div class="question">
                 <p id="wrapped_text">20. Masks come in packs of 3 and 4. What is the largest number of masks
-                    that cannot be obtained by combining some number of each package? For example, it is impossible to buy 5 masks, but it is possible
+                    that cannot be obtained by combining some number of each package? For example, it is impossible to
+                    buy 5 masks, but it is possible
                     to buy 7 masks.
                 </p>
                 <input id="field_not_inline" type="text" name="q20">

@@ -7,7 +7,8 @@
 
     <!-- A bunch of code for the upload to a google sheets-->
     <!-- Take this out of this file once you verify that it works in the practice exam-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="jquery.jslatex.js"></script>
     <script>
         function SubForm() {
@@ -16,25 +17,31 @@
                 url: 'https://api.apispreadsheets.com/data/8997/',
                 type: 'post',
                 data: $("#myForm").serializeArray(),
-                success: function() {
+                success: function () {
                     alert("Form Data Submitted :)")
                 },
-                error: function() {
+                error: function () {
                     alert("There was an error :(")
                 }
             });
         }
     </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body>
     <h1 id="title">Elementary Math Contest</h1>
     <h2 id="registration">Registration for the 2021 Contest is now open!</h2>
-    <a href="https://docs.google.com/forms/d/1fNqlD357Zyom183xmKv_j8U3OTSvsklbOPYJ66mQK64/edit?usp=sharing" class="button" id="reg_button">Register Now</a>
+    <a href="https://docs.google.com/forms/d/1fNqlD357Zyom183xmKv_j8U3OTSvsklbOPYJ66mQK64/edit?usp=sharing"
+        class="button" id="reg_button">Register Now</a>
 
     <br />
     <br />
@@ -45,40 +52,40 @@
     <div id="faq">
         <h2>Frequently Asked Questions</h2>
         <ul>
-            <li><b>What is the purpose of the EMC Math Contest?</b><br />Our school's math club decided to hold the EMC contest in 2019 as a way of exciting young students about the field of math. Specifically, we wanted to expose elementary age students to the creative problem solving and critical thinking aspects of mathematics that they don't often get to see through school alone. We believe that with exciting experiences like this at an early age, students can come to actively enjoy math, instead of seeing it as a chore.</li>
-            <li><b>What will the exam contain?</b><br />The exam will be roughly 20 questions. Answers to questions will be a single number (they will not be multiple choice, nor will students be required to submit explanations or work). Problems on the exam will range from simple calculations to word problems and other types of questions that require students to creatively approach solutions. When writing problems for the exam, we make sure to include ONLY topics that students learn in 3rd and/or 4th grade math courses in school-- we try to incorporate elements of creativity and critical thinking into problems that can be solved with the math that 3rd and 4th graders have learned in school.</li>
-            <li><b>Where and how will the contest be held?</b><br />This year, our math club has chosen to run the contest online. We are currently putting together a submission system through which students can take the exam online. A practice exam will open up on March 13th for students to both test out our testing platform and get a feel for the type of questions we may ask on the exam.</li>
-            <li><b>Is there a time limit for the contest?</b><br />This year, we have elected to not have a time limit. Students are invited to spent as little or as much time on the problems as they wish, as we want to make sure students have the time to think about every question they would like to. Submissions will be accepted any time on the day of the contest. Please note that the test will still be written to take roughly an hour to an hour and a half. We just don't want students to be pressured by a time limit. </li>
-            <li><b>What prizes will be given out?</b><br />While the exact awards we give out will be based on the number of students who eventually register, we can ensure that we will at least give out prizes for the top 3 students in each grade level, as well as the highest overall scoring boy and highest overall scoring girl.</li>
-            <li><b>How do I register for the contest?</b><br />The link at the top of the page will lead you to registration.</li>
+            <li><b>What is the purpose of the EMC Math Contest?</b><br />Our school's math club decided to hold the EMC
+                contest in 2019 as a way of exciting young students about the field of math. Specifically, we wanted to
+                expose elementary age students to the creative problem solving and critical thinking aspects of
+                mathematics that they don't often get to see through school alone. We believe that with exciting
+                experiences like this at an early age, students can come to actively enjoy math, instead of seeing it as
+                a chore.</li>
+            <li><b>What will the exam contain?</b><br />The exam will be roughly 20 questions. Answers to questions will
+                be a single number (they will not be multiple choice, nor will students be required to submit
+                explanations or work). Problems on the exam will range from simple calculations to word problems and
+                other types of questions that require students to creatively approach solutions. When writing problems
+                for the exam, we make sure to include ONLY topics that students learn in 3rd and/or 4th grade math
+                courses in school-- we try to incorporate elements of creativity and critical thinking into problems
+                that can be solved with the math that 3rd and 4th graders have learned in school.</li>
+            <li><b>Where and how will the contest be held?</b><br />This year, our math club has chosen to run the
+                contest online. We are currently putting together a submission system through which students can take
+                the exam online. A practice exam will open up on March 13th for students to both test out our testing
+                platform and get a feel for the type of questions we may ask on the exam.</li>
+            <li><b>Is there a time limit for the contest?</b><br />This year, we have elected to not have a time limit.
+                Students are invited to spent as little or as much time on the problems as they wish, as we want to make
+                sure students have the time to think about every question they would like to. Submissions will be
+                accepted any time on the day of the contest. Please note that the test will still be written to take
+                roughly an hour to an hour and a half. We just don't want students to be pressured by a time limit. This
+                change to the competition format overrides the previously states time for the exam on the
+                flyers/registration sheet. Students will be able to take the exam at any time on March 27th, after the
+                exam opens at 12:00 AM.
+            </li>
+            <li><b>What prizes will be given out?</b><br />While the exact awards we give out will be based on the
+                number of students who eventually register, we can ensure that we will at least give out prizes for the
+                top 3 students in each grade level, as well as the highest overall scoring boy and highest overall
+                scoring girl.</li>
+            <li><b>How do I register for the contest?</b><br />The link at the top of the page will lead you to
+                registration.</li>
         </ul>
     </div>
-    <!--
-    <form id="myForm">
-        <label>Full Name</label>
-        <br />
-        <input name="full_name" />
-        <br />
-        <label>Email</label>
-        <br />
-        <input name="email" />
-        <br />
-        <label>Age</label>
-        <br />
-        <input type="radio" id="age" name="age" value="18-35" /> 18-35
-        <input type="radio" id="age" name="age" value="35+" /> 35+
-        <br /><br />
-        <label>Message</label>
-        <br />
-        <textarea name="message"></textarea>
-        <br />
-        <label>Message</label>
-        <br />
-        <textarea name="message2"></textarea>
-        <br />
-        <br />
-    </form>
-    <button onclick="SubForm()">Submit</button>-->
 </body>
 
 </html>
