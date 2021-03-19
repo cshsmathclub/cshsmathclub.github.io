@@ -102,6 +102,11 @@
                     1. What is 902 + 44?
                 </p>
                 <input id="field_not_inline" type="text" name="q1">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>\(902 + 44 = \textcolor{green}{946}\)</p>
+                </div>
             </div>
 
             <div class="question">
@@ -109,6 +114,11 @@
                     2. What is 41234 - 9835?
                 </p>
                 <input id="field_not_inline" type="text" name="q2">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>\(41234 - 9835 = \textcolor{green}{31399}\)</p>
+                </div>
             </div>
 
             <div class="question">
@@ -116,6 +126,17 @@
                     3. What is 21 \(\times\) 50 + \(\frac{8}{2}\)
                 </p>
                 <input id="field_not_inline" type="text" name="q3">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>This problem requires the application of PEMDAS (parentheses, exponents, multiplication/division,
+                        and then addition/subtraction).
+                        Thus, first you would solve 21\(\times\)50 and then solve \(\frac{8}{2}\).
+                        Finally you would add the two values.<br /><br />
+                        \(21 \times 50 = 1050\)<br /><br />
+                        \(\frac{8}{2} = 4\)<br /><br />
+                        \(1050 + 4 = \textcolor{green}{1054}\)</p>
+                </div>
             </div>
 
             <div class="question">
@@ -126,6 +147,15 @@
                     12 donuts in a dozen?
                 </p>
                 <input id="field_not_inline" type="text" name="q4">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>Buying 53 sets of 12 donuts, Mr. Macafee essentially
+                        buys 53\(\times\)12 donuts.<br /><br />
+                        \(53\times12 = \textcolor{green}{636}\)
+                    </p>
+                    <img id="homer_donuts" src="exam_images/mmm_donuts.webp">
+                </div>
             </div>
 
             <div class="question">
@@ -133,6 +163,15 @@
                     5. Round 21031 to the nearest hundred.
                 </p>
                 <input id="field_not_inline" type="text" name="q5">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>The hundreds place is the third digit from the right.
+                        In this case, it is a 0. We look to the tens digit to see if we
+                        need to round down or up. In this case, the tens digit is a 3, so we round
+                        down to \(\textcolor{green}{21000}\).
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -140,6 +179,20 @@
                     6. What is the LCM of 18 and 32?
                 </p>
                 <input id="field_not_inline" type="text" name="q6">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>The LCM, or Least Common Multiple, is the smallest number that is
+                        evenly divided by both 18 and 32. Since we know this number is going
+                        to be evenly divided by 32, we check multiples of 32, and pick the first one
+                        that is evenly divided by 18. This happens to be 32 \(\times\) 9, or \(\textcolor{green}{288.}\)
+
+                        <br /><br />
+                        Note: In math-talk, if one number divides another with no remainder, we call the first one a
+                        <i>factor</i> or <i>divisor</i>
+                        and the second number a <i>multiple</i>.
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -149,19 +202,55 @@
                     Mr. Tyler to write his 45 question test?
                 </p>
                 <input id="field_not_inline" type="text" name="q7">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>This can be done two ways. The brute-force way is to write out a bunch of numbers starting from 1
+                        and adding them to see
+                        when you reach 45 total. Using this method, we see that \(1+2+3+...+9 = 45\), so the answer is
+                        \(\textcolor{green}{9 \text{ days}}\) <br /><br />
+
+                        That works pretty well, but what if we wanted to know how long before Mr. Tyler has 5000
+                        questions? We can't sit and add all the numbers up
+                        to 100, that would take forever! Instead, we can observe that the sum of the first \(n\) numbers
+                        is \(\frac{n\times(n+1)}{2}\). For example,
+                        the sum of the first 5 numbers is \(\frac{5\times6}{2} = 15\), and the sum of the first 100
+                        numbers is \(\frac{100\times101}{2} = 5050\). To see how long it
+                        takes Mr. Tyler to reach 45 questions, we see that the sum of the first \(\textcolor{green}{9}\)
+                        numbers is 45.
+                    </p>
+                </div>
             </div>
 
             <div class="question">
                 <p id="wrapped_text">8. Which number is lower, \(\frac{7}{24}\) or \(\frac{11}{33}\)? </p>
                 <input id="field_not_inline" type="text" name="q8">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>To compare fractions, we need them to have the same <i>denomenator</i>, or bottom number. To get
+                        these
+                        fractions to have the same denomenator is a bit tricky, though, because 24 and 33 are wacky
+                        numbers. Instead,
+                        we can turn \(\frac{11}{33}\) into \(\frac{1}{3}\). We also know that \(\frac{1}{3}\) is
+                        \(\frac{8}{24}\). Now, we
+                        can easily see that \(\textcolor{green}{\frac{7}{24}\text{ is smaller.}}\)</p>
+                </div>
             </div>
 
             <div class="question">
-                <p id="wrapped_text">9. If Joseph Madre Jr. has 3 shirts colored red, green, and blue,
+                <p id="wrapped_text">9. If Joseph has 3 shirts colored red, green, and blue,
                     and 5 masks colored black, orange, purple, pink, and brown, how many different
                     combinations of shirts and masks can he wear?
                 </p>
                 <input id="field_not_inline" type="text" name="q9">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>Since any shirt can be paired with any mask, we have 5 mask options for each of 3 shirts. This
+                        means that the total number of combinations is just \(\textcolor{green}{5\times3 = 15}\)
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -169,6 +258,15 @@
                     TYPEWRITER?
                 </p>
                 <input id="field_not_inline" type="text" name="q10">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>In the word TYPEWRITER, T, Y, E, W, and I are all symmetrical. However, we have to be sure to
+                        just
+                        count each letter once. This gives us \(\textcolor{green}{\text{5 unique, symmetrical
+                        letters.}}\)
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -178,16 +276,45 @@
                 </p>
                 <img src="exam_images/amy_jumps.jpg"><br />
                 <input id="field_not_inline" type="text" name="q11">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>To compute an <i>average</i>, we add up all the values, and divide by the number of
+                        values.<br /><br />
+                        \(19+23+17+21+20 = 100\)<br /><br />
+                        \(100 \div 5 = \textcolor{green}{20}\)</p>
+                </div>
             </div>
 
             <div class="question">
                 <p id="wrapped_text">12. What is 0 - 1 + 2 - 3 + 4 ... - 27 + 28?</p>
                 <input id="field_not_inline" type="text" name="q12">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>From \(0-1+2… -27\) you can see that for each pair of two numbers subtracted you will get -1, and
+                        since there are 14 pairs
+                        that would give you -14. Then you would add the 28 and get \(\textcolor{green}{14}\).</p>
+                </div>
             </div>
 
             <div class="question">
                 <p id="wrapped_text">13. What is the unit digit of \( \text{ }7^{12}\)?</p>
                 <input id="field_not_inline" type="text" name="q13">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>When we multiply numbers, there is an interesting property that the unit digit of the answer is
+                        always the
+                        product of the unit digits of the two numbers we were multiplying. In other words, even though
+                        \(7^{12}\) is
+                        a <i>huge</i> number, our calculation is easy. Also, we see that the unit digits as we multiply
+                        them form a
+                        sequence (they repeat). We start at 7, go to 9, then to 3, then to 1, and back to 7. We can
+                        count through 12
+                        numbers in this pattern and find that the unit digit of \(7^{12}\) is \(\textcolor{green}{1}\).
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -199,15 +326,46 @@
                     distance that Speedy runs in the time that it takes for Edward to walk to the gym (in miles)?
                 </p>
                 <input id="field_not_inline" type="text" name="q14">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>Figuring out all the times and distances that speedy turns around at is quite hard. Luckily
+                        though, we
+                        only care about the total <i>distance</i> he travels. This means we don't even care about the
+                        direction changes!
+                        We therefore just find out how far speedy would travel if he were running in a straight line in
+                        the time it takes Edward
+                        to walk to the gym. <br /><br />
+                        Edward will reach the gym in \(10 \div 4 = 2.5\) hours. <br /><br />
+                        Speedy will travel \(\textcolor{green}{10 \times 2.5 = 25}\) miles.
+                    </p>
+                </div>
             </div>
 
             <div class="question">
-                <p id="wrapped_text">15. Sarah has a class roster 100 students. They must collectively
+                <p id="wrapped_text">15. Sarah has a class roster with 100 students. They must collectively
                     decide on a class pet. Of the 100 students, there were 50 votes to get a snake and 90
                     votes to get a hamster. Assuming that everyone voted for either snake, hamster, or both, how
                     many people voted for both?
                 </p>
                 <input id="field_not_inline" type="text" name="q15">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>If we simply add up 50 and 90, we get 140 people. That's more people than there are in the class!
+                        This is because
+                        we counted each person who voted for both a snake and a hamster twice. Since we know that there
+                        are 100 people in the class,
+                        we find out how many people we ``double-counted" by subtracting the class size from the sum of
+                        the votes for snake and hamster.
+                        <br /><br />
+                        \(\textcolor{green}{140-100 = 40}\) people.
+                        <br /><br />
+                        Alternate Explanation: Since we know that 10 did not vote for hamster, those 10 had to vote for
+                        only snake. Since we know there were only 10
+                        from the snake group that voted only snake, the rest had to have voted hamster and snake.
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -219,6 +377,17 @@
                 </p>
                 <img id="overlapping_circles" src="exam_images/problem_16.png">
                 <input id="field_not_inline" type="text" name="q16">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>Since a radius is the distance from the center of the circle to any point on its circumference,
+                        or edge, we can see that
+                        AB, BC, CD, and DA are all radii. This means that each has a length of 7 and we just add them
+                        all up to get the
+                        perimeter of shape ABCD.<br /><br />
+                        \(7+7+7+7 = \textcolor{green}{28}\)
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -230,6 +399,19 @@
                 </p>
                 <img id="triangles" src="exam_images/problem_17.png">
                 <input id="field_not_inline" type="text" name="q17">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>We start with the smallest size of triangle. We count 16 of these triangles in the big triangle.
+                        The next
+                        size of triangle is the one made up of 4 of the smallest triangles. There are 7 of this size
+                        (don't forget the
+                        upside down one in the middle). The next size of triangle is the one made up of 9 of the small
+                        triangles. There are 3
+                        of these triangles. Lastly, there is the big triangle itself. <br /><br />
+                        \(16+7+3+1 =\textcolor{green}{27}\)
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -238,6 +420,21 @@
                     the area of a triangle with sides of 3, 4, and 5?
                 </p>
                 <input id="field_not_inline" type="text" name="q18">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>The formula for the area of a triangle is \(\frac{b\times h}{2}\) where b is the length of the
+                        base,
+                        and h is the height of the triangle.
+                        This shows us that if we half the base, the area gets halved. Similarly, if we half the height,
+                        the area gets halved. If we half both <thead>
+                            base and the height (as halving all the sides will do), we half the area <i>twice</i>. The
+                            area of the new triangle will be \(\frac{1}{4}\) of <thead>
+                                original area, or \(\textcolor{green}{6}\).
+                            </thead>
+                        </thead>
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -245,6 +442,16 @@
                     number of animals needed to have a total of 23 horns?
                 </p>
                 <input id="field_not_inline" type="text" name="q19">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>We are trying to get to 23 horns with as few animals as possible. Let's start by getting as many
+                        Rhinos as possible, as Rhinos have the most horns.
+                        We can get 7 rhinos before we reach 23 horns, and 7 rhinos gets us to 21 horns. We fill the
+                        remaining 2 horns needed with a deer, so we have 7 rhinos
+                        and 1 deer, or \(\textcolor{green}{\text{8 animals in total.}}\)
+                    </p>
+                </div>
             </div>
 
             <div class="question">
@@ -254,6 +461,29 @@
                     to buy 7 masks.
                 </p>
                 <input id="field_not_inline" type="text" name="q20">
+                <br />
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p>We are going to start at 4, and try to find possible numbers of masks that are impossible to buy.
+                        But how do
+                        we know when we have found the <i>highest</i> number that is impossible? As it turns out, if we
+                        reach 3 number in a
+                        row that are possible, every single number beyond those will be possible. This is because if we
+                        have one number of masks
+                        that is possible to buy, that number plus any multiple of 3 will also be a valid number of
+                        masks, as we could simply buy masks
+                        in packs of 3 to cover the ``extra'' that we included. <br /><br />
+                        We know that 5 is impossible. 6 is possible with 2 packs of 3 masks. 7 is possible with 1 of
+                        each pack, and 8 is possible with 2 packs
+                        of 4 masks. 6,7, and 8, are three in a row that is possible, so we know that
+                        \(\textcolor{green}{\text{5 is the highest impossible number}}\)
+                        <br /><br />
+                        Fun fact: This type of problem inspired something called the Chicken McNugget Theorem, because
+                        mathematicians were trying to find out what the
+                        highest number of chicken nuggets they could not buy was.
+                        </thead>
+                    </p>
+                </div>
             </div>
 
 
@@ -261,6 +491,26 @@
     </form>
     <a class="button" id="submit" onclick=SubForm()>Submit</a>
     <div id="end_space"></div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        console.log(coll.length)
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            console.log("Entered this For loop")
+            coll[i].addEventListener("click", function () {
+                console.log("I was clicked!")
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

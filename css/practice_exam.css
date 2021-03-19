@@ -129,3 +129,42 @@ button {
 #end_space {
     height: 300px;
 }
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18pt;
+  font-family: "KaTeX_Main";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-family: "KaTeX_Main";
+  font-size: 18pt;
+}
+
+.katex-html {
+    font-size: 18pt;
+}
+
+#homer_donuts {
+    display:block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
