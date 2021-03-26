@@ -3,16 +3,16 @@
 <html>
 
 <head>
-    <title>Practice Exam</title>
+    <title>EMC 2021</title>
 
     <script>
         function not_available() {
             var d = new Date();
             console.log(d.getDate())
-            if (d.getDate() < 13) {
-                alert("The practice exam will open on March 13th.")
+            if (d.getDate() < 27) {
+                alert("The exam will open on March 27th.")
             } else {
-                window.open("practice_exam.html")
+                window.open("exam.html")
             }
         }
     </script>
@@ -31,23 +31,28 @@
 </head>
 
 <body>
-    <h1 id="title">EMC Practice Exam</h1>
+    <h1 id="title">EMC 2021</h1>
     <h2 id="direction_head">Directions:</h2>
     <div id="direction_list">
         <ul>
-            <li>The practice test will open on March 13th, 2021.</li>
-            <li>This test consists of 25 questions. These questions are similar in topic and style to the ones you will
-                see on March 27th.</li>
-            <li>On the real exam, you are only allowed to use a writing utensil, scratch paper, and your big brain.
-                However, on this practice exam, you can use whatever resources you wish to use.</li>
+            <li>The exam will open on March 27th, 2021.</li>
+            <li>This test consists of 25 questions. The first 20 questions form the exam itself, and the last 5
+                questions
+                will only be scored to break ties.
+            </li>
+            <li>You are ONLY allowed to use: A writing utensil, scratch paper, rulers/protractors/compases, and your big
+                brain. You
+                are NOT allowed to talk to ANYONE ELSE about the questions on this exam. This includes friends, parents,
+                and siblings.
+            </li>
             <li>The problems are not necessarily in order of difficulty.</li>
-            <li>If you don't know how to do a problem, don't look at the solution right away. Try some different things
-                first.</li>
+            <li>If you don't know how to do a problem, skip it and come back later. You may find some later problems to
+                be easier.</li>
             <li>Most importantly, have fun!</li>
         </ul>
     </div>
     <br />
-    <a href="practice_exam_welcome.html" class="button" id="start_exam" onclick=not_available()>Start Practice Exam</a>
+    <a href="exam_welcome.html" class="button" id="start_exam" onclick=not_available()>Start Exam!</a>
 
 </body>
 
