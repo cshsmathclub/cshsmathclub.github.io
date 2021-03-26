@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Elementary Math Contest-Home</title>
+    <title>EMC Practice Exam</title>
 
     <link rel="stylesheet" href="../css/practice_exam.css">
 
@@ -20,18 +20,19 @@
                 return;
             }
 
-            /*
+
             fetch("https://api.apispreadsheets.com/data/9334/").then(res => {
                 if (res.status === 200) {
                     // SUCCESS
                     res.json().then(data => {
-                        const yourData = data
+                        const allFormData = data
+                        console.log(allFormData)
                     }).catch(err => console.log(err))
                 }
                 else {
                     // ERROR
                 }
-            })*/
+            })
 
 
             $.ajax({

@@ -42,7 +42,7 @@ body {
 }
 
 .question>#wrapped_text {
-    font-size: 21.78px;
+    font-size: 18pt;
     font-family: "KaTeX_Main";
 }
 
@@ -85,6 +85,14 @@ body {
 
 #triangles {
     width:75%;
+}
+
+#grid {
+    width: 50%;
+}
+
+#pascals_triangle {
+    width: 80%
 }
 
 #title {

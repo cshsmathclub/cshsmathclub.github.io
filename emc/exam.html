@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>EMC Exam</title>
+
+    <link rel="stylesheet" href="../css/practice_exam.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="jquery.jslatex.js"></script>
+    <script>
+        function SubForm() {
+
+
+            var form_data = $('#practice_exam').serializeArray()
+            if (form_data[0].value == "" || form_data[1].value == "" || form_data[2].value == "" || form_data[3].value == "") {
+                alert("Please fill out the information section fully")
+                return;
+            }
+
+
+            fetch("https://api.apispreadsheets.com/data/10057/").then(res => {
+                if (res.status === 200) {
+                    // SUCCESS
+                    res.json().then(data => {
+                        const allFormData = data
+                        console.log(allFormData)
+                    }).catch(err => console.log(err))
+                }
+                else {
+                    // ERROR
+                }
+            })
+
+
+            $.ajax({
+                //Change this URL below to the one for the 
+                url: 'https://api.apispreadsheets.com/data/10057/',
+                type: 'post',
+                data: $("#practice_exam").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                    $('#practice_exam')[0].reset();
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <h1 id="title">EMC 2021</h1>
+    <form id="practice_exam">
+        <h2>Student Information</h2>
+        <div id="info_section">
+            <div id="field">
+                <label>Name</label>
+                <input type="text" name="name">
+                <br />
+            </div>
+
+            <div id="field">
+                <label>Parent Email</label>
+                <input type="email" name="email">
+                <br />
+            </div>
+
+            <div id="field">
+                <label>Gender</label>
+                <input type="radio" id="gender" name="gender" value="male" /> Male
+                <input type="radio" id="gender" name="gender" value="female" /> Female
+                <input type="radio" id="gender" name="gender" value="pnts" /> Prefer Not To Say
+            </div>
+
+            <div id="field">
+                <label>Grade</label>
+                <input type="radio" id="grade" name="grade" value="3" /> 3rd
+                <input type="radio" id="grade" name="grade" value="4" /> 4th
+            </div>
+        </div>
+        <hr>
+
+        <br />
+
+        <h2>Exam Questions</h2>
+        <br />
+        <div id="question_section">
+            <div class="question">
+                <p id="wrapped_text">
+                    1. What is 21 \(+\) 36?
+                </p>
+                <input id="field_not_inline" type="text" name="q1">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    2. What is \(43\times47\)?
+                </p>
+                <input id="field_not_inline" type="text" name="q2">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    3. What is 3,272,021 - 267,848?
+                </p>
+                <input id="field_not_inline" type="text" name="q3">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    4. What is 54.1629 rounded to the nearest tenth?
+                </p>
+                <input id="field_not_inline" type="text" name="q4">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    5. What is \(30-11\times6\div3\)?
+                </p>
+                <input id="field_not_inline" type="text" name="q5">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    6. Write \(\frac{4}{24}+\frac{1}{3}\) in simplest form.
+                </p>
+                <input id="field_not_inline" type="text" name="q6">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    7. Mr. Macafee teaches two math classes. His morning class has 51 students and his afternoon class
+                    has 34 students. He
+                    wants to split them into large groups of equal size to do a group assignment. To do this, he must
+                    find the GCF (Greatest
+                    Common Factor) of the two numbers. What is the GCF of 51 and 34?
+                </p>
+                <input id="field_not_inline" type="text" name="q7">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    8. Which number is larger, \(\frac{9}{24}\), or \(\frac{7}{18}\)?
+                </p>
+                <input id="field_not_inline" type="text" name="q8">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    9. The Flash can run from New York to Los Angeles in 3 seconds.
+                    If New York to Los Angeles is \(\frac{1}{8}\) of the distance around the Earth,
+                    how long will it take the Flash to run around the Earth?
+                </p>
+                <input id="field_not_inline" type="text" name="q9">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    10. In the year 2030, Tom Brady completes exactly \(\frac{3}{4}\) of his throws.
+                    (Complete means it was caught by a member of his team). If Tom Brady throws 120 throws in
+                    2030, how many were caught?
+                </p>
+                <input id="field_not_inline" type="text" name="q10">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    11. How many letters in the word "ALGORITHMS" have at least one line of symmetry?
+                </p>
+                <input id="field_not_inline" type="text" name="q11">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    12. Jordan brought 50 cookies to Edward’s birthday party. At the party, Vincent ate 8% of cookies,
+                    Edward ate 24% of the
+                    cookies, and Jordan ate 32% of the cookies. How many cookies were left after the party?
+                </p>
+                <input id="field_not_inline" type="text" name="q12">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    13. Sam is hungry and goes to a nearby restaurant. There are three options for entrees: hamburgers,
+                    cheeseburgers, and
+                    pasta. There are 5 options for sides: french fries, mashed potatoes, broccoli, sweet potatoes, and
+                    green beans. For a
+                    drink, he can choose between Sprite, Pepsi, sweet tea, and lemonade. How many different combinations
+                    of entree, side,
+                    and drink can Sam order?
+                </p>
+                <input id="field_not_inline" type="text" name="q13">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    14. Sashi has a friend named Surya. Surya is 3 more than twice Sashi's age. Sashi is 7
+                    years old. How old is Surya?
+                </p>
+                <input id="field_not_inline" type="text" name="q14">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    15. On January 1st, Captain Haddock has 1000 blue blistering barnacles. Each day, the number of blue
+                    blistering barnacles doubles. On what date will Captain Haddock have more than a billion blue
+                    blistering barnacles?
+                </p>
+                <input id="field_not_inline" type="text" name="q15">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    16. Heyu likes finding the last digit of big numbers. What is the one's digit of \(8^{11}\)?
+                </p>
+                <input id="field_not_inline" type="text" name="q16">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    17. In Bryan's class, 20 people like cookies, 10 people like cake, 5 people like both cookies and
+                    cake, and 1 person doesn't like either.
+                    How many people are in Bryan's class?
+                </p>
+                <input id="field_not_inline" type="text" name="q17">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    18. Aditya is currently 10 miles west and 24 miles north of his home.
+                    If he heads directly home in a straight line, how many miles does it take for him to go back?
+                </p>
+                <input id="field_not_inline" type="text" name="q18">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    19. How many rectangles are in this picture? <i>Hint: Count the number of rectangles of
+                        each size, and add those numbers up.
+                    </i>
+                </p>
+                <img id="grid" src="exam_images/grid.jpg">
+                <br />
+                <input id="field_not_inline" type="text" name="q19">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    20. Pokemon cards come in packs of 7 and 20. If Jonathan can buy any amount of each pack, what is
+                    the largest number of
+                    Pokemon cards he CANNOT buy?
+                </p>
+                <input id="field_not_inline" type="text" name="q20">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+
+        </div>
+        <hr>
+
+        <br />
+
+        <h2>Tiebreak Section</h2>
+        <br />
+        <div id="tiebreak_section">
+            <div class="question">
+                <p id="wrapped_text">
+                    1. The first four numbers in a series are 1, 3, 7, and 15. What is the product of the next two
+                    numbers?
+                </p>
+                <input id="field_not_inline" type="text" name="t1">
+                <br />
+                <!--
+                <button type="button" class="collapsible">Solution</button>
+                <div class="content">
+                    <p></p>
+                </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    2. Vincent rolls 2 dice and multiplies the numbers he rolls. How many different products can he
+                    make?
+                </p>
+                <input id="field_not_inline" type="text" name="t2">
+                <br />
+                <!--
+                            <button type="button" class="collapsible">Solution</button>
+                            <div class="content">
+                                <p></p>
+                            </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    3. What is the tens digit of \(4^{7}\)?
+                </p>
+                <input id="field_not_inline" type="text" name="t3">
+                <br />
+                <!--
+                            <button type="button" class="collapsible">Solution</button>
+                            <div class="content">
+                                <p></p>
+                            </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    4. What is the 4th number in the 11th row of Pascal's Triangle below?
+                    <i>Note: By convention, the topmost row is the 0th row. The second topmost row is the 1st, and so
+                        on.</i>
+                </p>
+                <img id="pascals_triangle" src="exam_images/pascals triangle.jpg">
+                <br />
+                <input id="field_not_inline" type="text" name="t4">
+                <br />
+                <!--
+                            <button type="button" class="collapsible">Solution</button>
+                            <div class="content">
+                                <p></p>
+                            </div>-->
+            </div>
+
+            <div class="question">
+                <p id="wrapped_text">
+                    5. Express the repeating decimal \(0.\overline{19}\) as a fraction.
+                </p>
+                <input id="field_not_inline" type="text" name="t5">
+                <br />
+                <!--
+                            <button type="button" class="collapsible">Solution</button>
+                            <div class="content">
+                                <p></p>
+                            </div>-->
+            </div>
+        </div>
+    </form>
+    <a class="button" id="submit" onclick=SubForm()>Submit</a>
+    <div id="end_space"></div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        console.log(coll.length)
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            console.log("Entered this For loop")
+            coll[i].addEventListener("click", function () {
+                console.log("I was clicked!")
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
