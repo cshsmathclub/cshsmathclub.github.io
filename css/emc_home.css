@@ -15,8 +15,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#reg_button,
-#practice_exam_button {
+#exam_button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
