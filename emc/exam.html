@@ -13,15 +13,17 @@
     <script>
         function SubForm() {
 
-
             var form_data = $('#practice_exam').serializeArray()
             if (form_data[0].value == "" || form_data[1].value == "" || form_data[2].value == "" || form_data[3].value == "") {
                 alert("Please fill out the information section fully")
                 return;
             }
 
+            document.getElementById("submit").hidden = true;
+            console.log("Ok It's Hidden")
 
-            fetch("https://api.apispreadsheets.com/data/10057/").then(res => {
+
+            /*fetch("https://api.apispreadsheets.com/data/10097/").then(res => {
                 if (res.status === 200) {
                     // SUCCESS
                     res.json().then(data => {
@@ -32,22 +34,27 @@
                 else {
                     // ERROR
                 }
-            })
+            })*/
 
 
             $.ajax({
                 //Change this URL below to the one for the 
-                url: 'https://api.apispreadsheets.com/data/10057/',
+                url: 'https://api.apispreadsheets.com/data/10097/',
                 type: 'post',
                 data: $("#practice_exam").serializeArray(),
                 success: function () {
                     alert("Form Data Submitted :)")
                     $('#practice_exam')[0].reset();
+                    document.getElementById("submit").hidden = false;
                 },
                 error: function () {
                     alert("There was an error :(")
                 }
             });
+
+            //document.getElementById("submit").onclick = SubForm();
+            //document.getElementById("submit").hidden = false;
+
 
         }
     </script>
