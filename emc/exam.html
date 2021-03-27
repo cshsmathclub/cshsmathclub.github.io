@@ -46,6 +46,10 @@
                     alert("Form Data Submitted :)")
                     $('#practice_exam')[0].reset();
                     document.getElementById("submit").hidden = false;
+                    document.write("<h2 style=" + "\"text-align: center; font-family: Segoe UI;\"" + ">These were your submitted answers<h2>")
+                    for (i = 0; i < form_data.length; i++) {
+                        document.write("<p style=\" font-family: Segoe UI; text-align: center; font-size:15pt;\">" + form_data[i].name + ": " + form_data[i].value + "<br />" + "</p>");
+                    }
                 },
                 error: function () {
                     alert("There was an error :(")
